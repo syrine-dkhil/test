@@ -6,11 +6,3 @@ script:
   - docker build -t mannydesigns/node .
   - docker images mannydesigns/node
 
-before_deploy:
-  - docker login -u syrinedkhil -p 11392840Dd
-
-deploy:
-  provider: script
-  script: docker push mannydesigns/node
-  on:
-    branch: master
